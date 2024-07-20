@@ -1,7 +1,52 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <body>
 <h1>Hello World</h1>
 <p>I'm hosted with GitHub Pages.</p>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Manufacturers Visualization</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="slide" id="slide-intro">
+        <h1>Car Manufacturers Visualization</h1>
+        <p>Welcome to the narrative visualization of the top 20 car manufacturers in the US.</p>
+        <button onclick="showSlide('slide-1')">Start</button>
+    </div>
+    
+    <div class="slide" id="slide-1">
+        <h1>Fuel Efficiency Trends</h1>
+        <div id="visualization-1"></div>
+        <button onclick="showSlide('slide-2')">Next</button>
+    </div>
+    
+    <div class="slide" id="slide-2">
+        <h1>Horsepower vs. Price</h1>
+        <div id="visualization-2"></div>
+        <button onclick="showSlide('slide-3')">Next</button>
+    </div>
+    
+    <div class="slide" id="slide-3">
+        <h1>Fuel Efficiency vs. Horsepower</h1>
+        <div id="visualization-3"></div>
+        <button onclick="showSlide('slide-conclusion')">Next</button>
+    </div>
+    
+    <div class="slide" id="slide-conclusion">
+        <h1>Conclusion</h1>
+        <p>Thank you for exploring the data visualization of the top 20 car manufacturers.</p>
+        <button onclick="showSlide('slide-intro')">Restart</button>
+    </div>
+    
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="slides.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
