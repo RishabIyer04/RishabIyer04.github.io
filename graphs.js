@@ -1,7 +1,7 @@
-d3.csv('Car_Summary.csv').then(data => {
+d3.csv('data/Car_Summary.csv').then(data => {
     // Convert necessary fields to numeric
     data.forEach(d => {
-        d['# of Different Models'] = +d['# of Different Models'];
+        d['# of Models'] = +d['# of Models'];
         d['Avg Engine HP'] = +d['Avg Engine HP'];
         d['Avg MPG'] = +d['Avg MPG'];
         d['Avg MSRP'] = +d['Avg MSRP'];
