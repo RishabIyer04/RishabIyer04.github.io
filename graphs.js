@@ -8,9 +8,9 @@ d3.csv('data/Car_Summary.csv').then(data => {
     });
 
     // Create visualizations for each slide
-    sceneMSRPBarChart(data, '#visualization-1');
-    sceneHorsepowerPrice(data, '#visualization-2');
-    sceneFuelEfficiencyHorsepower(data, '#visualization-3');
+    sceneMSRPBarChart(data, '#graph1');
+    // sceneHorsepowerPrice(data, '#visualization-2');
+    // sceneFuelEfficiencyHorsepower(data, '#visualization-3');
 });
 
 
