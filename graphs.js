@@ -21,7 +21,6 @@ d3.csv('data/Filtered_NBA_Player_Stats.csv').then(data => {
     });
 
     function drawPlot1() {
-        // Create an SVG container
         const sortedData = data.filter(d => d.Pos === 'PG');
     
         const svg = d3.select('#graph1');
@@ -78,5 +77,7 @@ d3.csv('data/Filtered_NBA_Player_Stats.csv').then(data => {
     }
 
     window.drawPlot1 = drawPlot1;
+
+    drawPlot1()
 
 });

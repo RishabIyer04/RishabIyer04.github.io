@@ -19,7 +19,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     drawPlot1();
-
     
 });
 
