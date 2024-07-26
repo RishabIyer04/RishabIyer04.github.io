@@ -17,8 +17,11 @@ function drawPlot1(data) {
 
     svg.selectAll('*').remove();
 
+    const translateX = (+svg.attr("width") - width) / 2;
+    const translateY = (+svg.attr("height") - height) / 2;
+
     const g = svg.append('g')
-        .attr('transform', `translate(${margin.left},${margin.top})`);
+        .attr('transform', `translate(${translateX + margin.left},${translateY + margin.top})`);
 
     // Create axes
     const x = d3.scaleLinear()
