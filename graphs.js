@@ -96,6 +96,6 @@ d3.csv('data/Filtered_NBA_Player_Stats.csv').then(data => {
 
     window.drawPlot1 = drawPlot1;
 
-    drawPlot1()
+    // drawPlot1()
 
 });
