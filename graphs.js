@@ -30,7 +30,7 @@ function drawPlot1(data) {
         .range([0, width]);
 
     const y = d3.scaleLinear()
-        .domain([0, d3.max(sortedData, d => d.PTS)])
+        .domain([0, 40])
         .range([height, 0]);
 
     // Add dots
@@ -55,7 +55,7 @@ function drawPlot1(data) {
 
     // Add y-axis
     svg.append('g')
-        .attr("transform", `translate(${margin.left}, ${margin.left})`)
+        .attr("transform", `translate(${margin.left}, 0)`)
         .call(d3.axisLeft(y).ticks(8)) // 8 evenly spaced ticks
         .append('text')
         .attr('fill', '#000')
