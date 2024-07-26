@@ -1,17 +1,35 @@
-// d3.csv('data/Filtered_NBA_Stats.csv').then(data => {
-//     // Convert necessary fields to numeric
-//     data.forEach(d => {
-//         d['# of Models'] = +d['# of Models'];
-//         d['Avg Engine HP'] = +d['Avg Engine HP'];
-//         d['Avg MPG'] = +d['Avg MPG'];
-//         d['Avg MSRP'] = +d['Avg MSRP'];
-//     });
+document.addEventListener("DOMContentLoaded", function() {
+    // Hide all slides except the first one
+    const slides = document.querySelectorAll('.slide');
+    slides.forEach((slide, index) => {
+        if (index !== 0) {
+            slide.style.display = 'none';
+        }
+    });
 
-//     // Create visualizations for each slide
-//     // drawPlot1(data, '#graph1');
-//     // sceneHorsepowerPrice(data, '#visualization-2');
-//     // sceneFuelEfficiencyHorsepower(data, '#visualization-3');
-// });
+    drawPlot1();
+    
+});
+
+
+function nextSlide(current, next) {
+    document.getElementById(current).style.display = 'none';
+    document.getElementById(next).style.display = 'block';
+    if (next === 'slide1') drawPlot1();
+    if (next === 'slide2') drawPlot2();
+    if (next === 'slide3') drawPlot3();
+    if (next === 'conlusion') drawPlot4();
+}
+
+function previousSlide(current, previous) {
+    document.getElementById(current).style.display = 'none';
+    document.getElementById(previous).style.display = 'block';
+    if (previous === 'slide1') drawPlot1();
+    if (previous === 'slide2') drawPlot2();
+    if (previous === 'slide3') drawPlot3();
+}
+
+
 
 d3.csv('data/Filtered_NBA_Player_Stats.csv').then(data => {
 
