@@ -20,15 +20,6 @@ function drawPlot1(data) {
     const g = svg.append('g')
         .attr('transform', `translate(${margin.left},${margin.top})`);
 
-    // Add dots
-    g.selectAll('circle')
-        .data(sortedData)
-        .enter().append('circle')
-        .attr('cx', d => x(d.Age))
-        .attr('cy', d => y(d.PTS))
-        .attr('r', 1.5)
-        .style("fill", "#69b3a2");
-
     // Create axes
     const x = d3.scaleLinear()
         .domain([0, 40])
@@ -37,6 +28,15 @@ function drawPlot1(data) {
     const y = d3.scaleLinear()
         .domain([0, 40])
         .range([height, 0]);
+
+    // Add dots
+    g.selectAll('circle')
+        .data(sortedData)
+        .enter().append('circle')
+        .attr('cx', d => x(d.Age))
+        .attr('cy', d => y(d.PTS))
+        .attr('r', 1.5)
+        .style("fill", "#69b3a2");
 
     // Add x-axis
     svg.append('g')
