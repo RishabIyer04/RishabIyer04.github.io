@@ -45,7 +45,7 @@ function drawPlot1(data) {
     // Add x-axis
     svg.append('g')
         .attr('transform', `translate(0, ${height})`)
-        .call(d3.axisBottom(x).ticks(8)) // 8 evenly spaced ticks
+        .call(d3.axisBottom(x).ticks(21)) // 21 evenly spaced ticks
         .append('text')
         .attr('fill', '#000')
         .attr('x', width / 2)
@@ -60,7 +60,7 @@ function drawPlot1(data) {
         .attr('fill', '#000')
         .attr('transform', 'rotate(-90)')
         .attr('x', -height / 2)
-        .attr('y', -margin.left + 15)
+        .attr('y', -margin.left + 20)
         .attr('dy', '1em')
         .attr('text-anchor', 'middle')
         .text('PTS');
