@@ -26,7 +26,7 @@ function drawPlot1(data) {
 
     // Create axes
     const x = d3.scaleLinear()
-        .domain([d3.min(sortedData, d => d.Age), d3.max(sortedData, d => d.Age)])
+        .domain([d3.min(sortedData, d => d.Age), 40])
         .range([0, width]);
 
     const y = d3.scaleLinear()
@@ -44,7 +44,7 @@ function drawPlot1(data) {
 
     // Add x-axis
     svg.append('g')
-        .attr('transform', `translate(0, ${height})`)
+        .attr('transform', `translate(${margin.left}, ${height})`)
         .call(d3.axisBottom(x).ticks(23)) // 23 evenly spaced ticks
         .append('text')
         .attr('fill', '#000')
