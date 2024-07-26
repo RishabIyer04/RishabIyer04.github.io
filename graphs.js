@@ -25,7 +25,7 @@ d3.csv('data/Filtered_NBA_Player_Stats.csv').then(data => {
         const sortedData = data.filter(d => d.Pos === 'PG');
     
         const svg = d3.select('#graph1');
-        const margin = {top: 20, right: 120, bottom: 50, left: 50};
+        const margin = {top: 20, right: 30, bottom: 50, left: 50};
         const width = +svg.attr("width") - margin.left - margin.right;
         const height = +svg.attr("height") - margin.top - margin.bottom;
     
@@ -78,5 +78,5 @@ d3.csv('data/Filtered_NBA_Player_Stats.csv').then(data => {
     }
 
     window.drawPlot1 = drawPlot1;
-    
+
 });
