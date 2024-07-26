@@ -26,11 +26,11 @@ function drawPlot1(data) {
 
     // Create axes
     const x = d3.scaleLinear()
-        .domain([18, 40])
+        .domain([d3.min(sortedData, d => d.Age), d3.max(sortedData, d => d.Age)])
         .range([0, width]);
 
     const y = d3.scaleLinear()
-        .domain([0, 40])
+        .domain([0, d3.max(sortedData, d => d.PTS)])
         .range([height, 0]);
 
     // Add dots
@@ -39,7 +39,7 @@ function drawPlot1(data) {
         .enter().append('circle')
         .attr('cx', d => x(d.Age))
         .attr('cy', d => y(d.PTS))
-        .attr('r', 10)
+        .attr('r', 7)
         .style("fill", "#69b3a2");
 
     // Add x-axis
