@@ -16,43 +16,45 @@
 </head>
 <body>
     <div class="slide" id="intro">
-        <h1>Car Manufacturers Visualization</h1>
+        <h1>NBA Visualization</h1>
         <p>
-            What is the best car brand for your money? With the amount of car manufacturers that sell in the United
-            States, they are constantly pushing customers into the belief that their respective brand is the "best" for
-            them. In an economy like in 2024, people are looking for the best deals they can find from respectable car brands.
-            These customers are looking for average price, price to efficiency ratio, and price to Horsepower ratio.
+            Stuff about the NBA
         </p>
         <button onclick="nextSlide('intro', 'slide1')">Next</button>
     </div>
     
     <div class="slide" id="slide1">
-        <h1>Car Brand Average Price</h1>
+        <h1>PG: Age vs PTS</h1>
         <p>Explanation of the first graph...lol</p>
-        <div id="graph1"></div>
+        <svg id="graph1" width="800" height="500"></svg>
         <button onclick="previousSlide('slide1', 'intro')">Previous</button>
         <button onclick="nextSlide('slide1', 'slide2')">Next</button>
     </div>
     
     <div class="slide" id="slide2">
-        <h1>Horsepower vs. Price</h1>
+        <h1>SF: Age vs PTS</h1>
         <p>Explanation of the second graph...lol</p>
-        <div id="graph2"></div>
+        <svg id="graph2" width="800" height="500"></svg>
         <button onclick="previousSlide('slide2', 'slide1')">Previous</button>
         <button onclick="nextSlide('slide2', 'slide3')">Next</button>
     </div>
     
     <div class="slide" id="slide3">
-        <h1>Fuel Efficiency vs. Price</h1>
+        <h1>C: Age vs PTS</h1>
         <p>Explanation of the third graph...lol</p>
-        <div id="graph3"></div>
+        <svg id="graph3" width="800" height="500"></svg>
         <button onclick="previousSlide('slide3', 'slide2')">Previous</button>
         <button onclick="nextSlide('slide3', 'conclusion')">Next</button>
     </div>
     
     <div class="slide" id="conclusion">
         <h1>Conclusion</h1>
-        <p>In conclusion, all these car brands are alright, but the best one by most metrics is...</p>
+        <p>
+            Let's play around with the scatter plot and compare how different positions perform based on their age.
+            Other stuff.
+        </p>
+        <svg id="graph4" width="800" height="500"></svg>
+        <button onclick="previousSlide('conclusion', 'slide3')">Previous</button>
         <button onclick="nextSlide('conclusion', 'intro')">Back to Beginning</button>
     </div>
     <script src="https://d3js.org/d3.v6.min.js"></script>
