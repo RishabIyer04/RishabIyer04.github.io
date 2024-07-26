@@ -11,7 +11,7 @@ function drawPlot1(data) {
     const sortedData = data.filter(d => d.Pos === 'PG');
 
     const svg = d3.select('#graph1');
-    const margin = {top: 20, right: 30, bottom: 50, left: 80};
+    const margin = {top: 50, right: 50, bottom: 50, left: 50};
     const width = +svg.attr("width") - margin.left - margin.right;
     const height = +svg.attr("height") - margin.top - margin.bottom;
 
