@@ -24,8 +24,8 @@ function drawPlot1(data) {
     g.selectAll('circle')
         .data(sortedData)
         .enter().append('circle')
-        .attr('cx', d => x(+d.Age))
-        .attr('cy', d => y(+d.PTS))
+        .attr('cx', d => x(d.Age))
+        .attr('cy', d => y(d.PTS))
         .attr('r', 1.5)
         .style("fill", "#69b3a2");
 
