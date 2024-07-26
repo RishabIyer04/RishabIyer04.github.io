@@ -7,23 +7,27 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    drawPlot1();
+    window.data = null;
+    loadData().then(loadedData => {
+        window.data = loadedData;
+        drawPlot1(window.data);
+    });
 
 });
 
 function nextSlide(current, next) {
     document.getElementById(current).style.display = 'none';
     document.getElementById(next).style.display = 'block';
-    if (next === 'slide1') drawPlot1();
-    if (next === 'slide2') drawPlot2();
-    if (next === 'slide3') drawPlot3();
-    if (next === 'conlusion') drawPlot4();
+    if (next === 'slide1' && window.data) drawPlot1(window.data);
+    if (next === 'slide2' && window.data) drawPlot2(window.data);
+    if (next === 'slide3' && window.data) drawPlot3(window.data);
+    if (next === 'conclusion' && window.data) drawPlot4(window.data);
 }
 
 function previousSlide(current, previous) {
     document.getElementById(current).style.display = 'none';
     document.getElementById(previous).style.display = 'block';
-    if (previous === 'slide1') drawPlot1();
-    if (previous === 'slide2') drawPlot2();
-    if (previous === 'slide3') drawPlot3();
+    if (previous === 'slide1' && window.data) drawPlot1(window.data);
+    if (previous === 'slide2' && window.data) drawPlot2(window.data);
+    if (previous === 'slide3' && window.data) drawPlot3(window.data);
 }

@@ -7,7 +7,7 @@ async function loadData() {
     return data;
 }
 
-function drawPlot1() {
+function drawPlot1(data) {
     const sortedData = data.filter(d => d.Pos === 'PG');
 
     const svg = d3.select('#graph1');
@@ -63,4 +63,5 @@ function drawPlot1() {
 
 }
 
+window.loadData = loadData;
 window.drawPlot1 = drawPlot1;
