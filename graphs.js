@@ -11,17 +11,18 @@ function drawPlot1(data) {
     const sortedData = data.filter(d => d.Pos === 'PG');
 
     const svg = d3.select('#graph1');
-    const margin = {top: 20, right: 30, bottom: 50, left: 50};
+    const margin = {top: 20, right: 30, bottom: 50, left: 80};
     const width = +svg.attr("width") - margin.left - margin.right;
     const height = +svg.attr("height") - margin.top - margin.bottom;
 
     svg.selectAll('*').remove();
 
-    const translateX = (+svg.attr("width") - width) / 2;
-    const translateY = (+svg.attr("height") - height) / 2;
+    // const translateX = (+svg.attr("width") - width) / 2;
+    // const translateY = (+svg.attr("height") - height) / 2;
 
     const g = svg.append('g')
-        .attr('transform', `translate(${translateX + margin.left},${translateY + margin.top})`);
+        .attr('transform', `translate(${margin.left},${margin.top})`);
+        // .attr('transform', `translate(${translateX + margin.left},${translateY + margin.top})`);
 
     // Create axes
     const x = d3.scaleLinear()
