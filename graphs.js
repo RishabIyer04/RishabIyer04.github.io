@@ -44,7 +44,7 @@ function drawPlot1(data) {
 
     // Add x-axis
     svg.append('g')
-        .attr('transform', `translate(${margin.left}, ${height})`)
+        .attr('transform', `translate(${margin.left}, ${height + 50})`)
         .call(d3.axisBottom(x).ticks(23)) // 23 evenly spaced ticks
         .append('text')
         .attr('fill', '#000')
@@ -55,7 +55,7 @@ function drawPlot1(data) {
 
     // Add y-axis
     svg.append('g')
-        .attr("transform", `translate(${margin.left}, 0)`)
+        .attr("transform", `translate(${margin.left}, 50)`)
         .call(d3.axisLeft(y).ticks(8)) // 8 evenly spaced ticks
         .append('text')
         .attr('fill', '#000')
