@@ -136,7 +136,7 @@ function addTooltips(g, data) {
                 .style("top", (event.pageY - 28) + "px");
         })
         .on("mouseout", function(d) {
-            d3.select(d.node())
+            d3.select(this)
                 .attr('r', 7)
                 .style("fill", "#69b3a2");
 
