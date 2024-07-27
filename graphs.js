@@ -8,10 +8,10 @@ async function loadData() {
     return data;
 }
 
-function drawPlot1(data) {
-    const sortedData = data.filter(d => d.Pos === 'PG');
+function drawPlot1(data, position) {
+    const sortedData = data.filter(d => d.Pos === position);
 
-    const svg = d3.select('#graph1');
+    const svg = d3.select('#graph');
     const margin = {top: 50, right: 50, bottom: 50, left: 50};
     const width = +svg.attr("width") - margin.left - margin.right;
     const height = +svg.attr("height") - margin.top - margin.bottom;
