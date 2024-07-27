@@ -116,24 +116,11 @@ function addAnnotations(g, x, y, data) {
 
 
 function addTooltips(svg, x, y, data) {
-    const voronoi = d3.voronoi()
-        .x(d => x(d.Age))
-        .y(d => y(d.PTS))
-        .extent([[0, 0], [svg.attr("width"), svg.attr("height")]]);
-
-    const voronoiGrid = svg.append("g")
-        .attr("class", "voronoi");
-
     const tooltip = d3.select("body").append("div")
         .attr("class", "tooltip")
         .style("opacity", 0);
 
-    voronoiGrid.selectAll("path")
-        .data(voronoi.polygons(data))
-        .enter().append("path")
-        .attr("d", d => d ? `M${d.join("L")}Z` : null)
-        .style("fill", "none")
-        .style("pointer-events", "all")
+   g.selectAll("circle")
         .on("mouseover", function(event, d) {
             d3.selectAll('circle')
                 .attr('r', 7)
@@ -141,12 +128,13 @@ function addTooltips(svg, x, y, data) {
 
             d3.select(d.node())
                 .attr('r', 7)
-                .style("fill", "#69b3a2")
+                .style("fill", "#d22c2c")
                 .style("stroke", "red");
 
             tooltip.transition()
                 .duration(200)
                 .style("opacity", .9);
+
             tooltip.html(`Name: ${d.Player} <br/> Position: ${d.data.Pos} <br/> Age: ${d.Age} <br/> PTS: ${d.PTS} <br/> 2P: ${d["2P"]} <br/> 3P: ${d["3P"]}`)
                 .style("left", (event.pageX + 5) + "px")
                 .style("top", (event.pageY - 28) + "px");
