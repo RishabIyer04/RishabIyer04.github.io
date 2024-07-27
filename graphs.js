@@ -3,6 +3,7 @@ async function loadData() {
     data.forEach(d => {
         d.Age = +d.Age;
         d.PTS = +d.PTS;
+        d["2PT"] = +d["2PT"];
     });
     return data;
 }
@@ -66,7 +67,50 @@ function drawPlot1(data) {
         .attr('text-anchor', 'middle')
         .text('PTS');
 
+    addAnnotations(g, x, y, sortedData);
+
 }
 
 window.loadData = loadData;
 window.drawPlot1 = drawPlot1;
+
+
+function addAnnotations(g, x, y, data) {
+    // Find players with the highest PTS at ages 24 and 35
+    const topPlayer24 = data.filter(d => d.Age === 24).reduce((a, b) => a.PTS > b.PTS ? a : b);
+    const topPlayer35 = data.filter(d => d.Age === 35).reduce((a, b) => a.PTS > b.PTS ? a : b);
+
+    // Add annotations
+    const annotations = [
+        {
+            note: {
+                title: `${topPlayer24.Player}`,
+                label: `Position: ${topPlayer24.Pos} \n Age: ${topPlayer24.Age} \n PTS: ${topPlayer24.PTS} \n 2PT: ${topPlayer24["2PT"]}`
+            },
+            data: topPlayer24,
+            dx: 50,  // move 50 pixels to the right
+            dy: -50  // move 50 pixels up
+        },
+        {
+            note: {
+                title: `${topPlayer35.Player}`,
+                label: `Position: ${topPlayer35.Pos} \n Age: ${topPlayer35.Age} \n PTS: ${topPlayer35.PTS} \n 2PT: ${topPlayer35["2PT"]}`
+            },
+            data: topPlayer35,
+            dx: 50,  // move 50 pixels to the right
+            dy: -50  // move 50 pixels up
+        }
+    ];
+
+    const makeAnnotations = d3.annotation()
+        .type(d3.annotationLabel)
+        .accessors({
+            x: d => x(d.Age),
+            y: d => y(d.PTS)
+        })
+        .annotations(annotations);
+
+    g.append("g")
+        .attr("class", "annotation-group")
+        .call(makeAnnotations);
+}
