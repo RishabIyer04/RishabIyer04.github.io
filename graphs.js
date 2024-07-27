@@ -66,7 +66,7 @@ function drawPlot1(data) {
         .text('PTS');
 
     addAnnotations(g, x, y, sortedData);
-    addTooltips(svg, x, y, sortedData);
+    addTooltips(g, sortedData);
 
 }
 
@@ -115,18 +115,14 @@ function addAnnotations(g, x, y, data) {
 }
 
 
-function addTooltips(svg, x, y, data) {
+function addTooltips(g, data) {
     const tooltip = d3.select("body").append("div")
         .attr("class", "tooltip")
         .style("opacity", 0);
 
    g.selectAll("circle")
         .on("mouseover", function(event, d) {
-            d3.selectAll('circle')
-                .attr('r', 7)
-                .style("fill", "#69b3a2");
-
-            d3.select(d.node())
+            d3.select(this)
                 .attr('r', 7)
                 .style("fill", "#d22c2c")
                 .style("stroke", "red");
@@ -135,12 +131,12 @@ function addTooltips(svg, x, y, data) {
                 .duration(200)
                 .style("opacity", .9);
 
-            tooltip.html(`Name: ${d.Player} <br/> Position: ${d.data.Pos} <br/> Age: ${d.Age} <br/> PTS: ${d.PTS} <br/> 2P: ${d["2P"]} <br/> 3P: ${d["3P"]}`)
+            tooltip.html(`Name: ${data.Player} <br/> Position: ${data.Pos} <br/> Age: ${data.Age} <br/> PTS: ${data.PTS} <br/> 2P: ${data["2P"]} <br/> 3P: ${data["3P"]}`)
                 .style("left", (event.pageX + 5) + "px")
                 .style("top", (event.pageY - 28) + "px");
         })
         .on("mouseout", function(d) {
-            d3.select(d.data.node())
+            d3.select(d.node())
                 .attr('r', 7)
                 .style("fill", "#69b3a2");
 
