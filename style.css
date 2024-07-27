@@ -8,5 +8,5 @@ svg {
 
 .annotation-group text {
     font-size: 12px;
-    white-space: pre;  /* Preserve whitespace and newlines */
+    white-space: normal;
 }
