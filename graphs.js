@@ -122,27 +122,27 @@ function addTooltips(g, data) {
 
    g.selectAll("circle")
         .on("mouseover", function(event, d) {
-            d3.select(this)
+            tooltip.select(this)
                 .attr('r', 7)
                 .style("fill", "#d22c2c")
                 .style("stroke", "red");
 
             tooltip.transition()
-                .duration(200)
+                .duration(100)
                 .style("opacity", .9);
 
-            tooltip.html(`Name: ${data.Player} <br/> Position: ${data.Pos} <br/> Age: ${data.Age} <br/> PTS: ${data.PTS} <br/> 2P: ${data["2P"]} <br/> 3P: ${data["3P"]}`)
+            tooltip.html(`Name: ${d.Player} <br/> Position: ${d.Pos} <br/> Age: ${d.Age} <br/> PTS: ${d.PTS} <br/> 2P: ${d["2P"]} <br/> 3P: ${d["3P"]}`)
                 .style("left", (event.pageX + 5) + "px")
                 .style("top", (event.pageY - 28) + "px");
         })
         .on("mouseout", function(d) {
             d3.select(this)
                 .attr('r', 7)
-                .style("fill", "#69b3a2");
+                .style("fill", "#69b3a2")
+                .style("stroke", "black");
 
             tooltip.transition()
-                .duration(500)
+                .duration(100)
                 .style("opacity", 0);
         });
-
 }
