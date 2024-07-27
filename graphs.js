@@ -3,7 +3,7 @@ async function loadData() {
     data.forEach(d => {
         d.Age = +d.Age;
         d.PTS = +d.PTS;
-        d["2PT"] = +d["2PT"];
+        d["2P"] = +d["2P"];
     });
     return data;
 }
@@ -85,7 +85,7 @@ function addAnnotations(g, x, y, data) {
         {
             note: {
                 title: `${topPlayer24.Player}`,
-                label: `Position: ${topPlayer24.Pos} \n Age: ${topPlayer24.Age} \n PTS: ${topPlayer24.PTS} \n 2PT: ${topPlayer24["2PT"]}`
+                label: `Position: ${topPlayer24.Pos} \n Age: ${topPlayer24.Age} \n PTS: ${topPlayer24.PTS} \n 2PT: ${topPlayer24["2P"]}`
             },
             data: topPlayer24,
             dx: 50,  // move 50 pixels to the right
@@ -94,7 +94,7 @@ function addAnnotations(g, x, y, data) {
         {
             note: {
                 title: `${topPlayer35.Player}`,
-                label: `Position: ${topPlayer35.Pos} \n Age: ${topPlayer35.Age} \n PTS: ${topPlayer35.PTS} \n 2PT: ${topPlayer35["2PT"]}`
+                label: `Position: ${topPlayer35.Pos} \n Age: ${topPlayer35.Age} \n PTS: ${topPlayer35.PTS} \n 2PT: ${topPlayer35["2P"]}`
             },
             data: topPlayer35,
             dx: 50,  // move 50 pixels to the right

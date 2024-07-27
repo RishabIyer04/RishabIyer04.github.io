@@ -5,3 +5,8 @@ svg {
     display: block;
     margin: 0 auto;
 }
+
+.annotation-group text {
+    font-size: 12px;
+    white-space: pre;  /* Preserve whitespace and newlines */
+}
