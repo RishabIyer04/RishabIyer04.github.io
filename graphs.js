@@ -122,7 +122,7 @@ function addTooltips(g, data) {
 
    g.selectAll("circle")
         .on("mouseover", function(event, d) {
-            tooltip.select(this)
+            d3.select(this)
                 .attr('r', 7)
                 .style("fill", "#d22c2c")
                 .style("stroke", "red");
