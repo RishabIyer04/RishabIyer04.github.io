@@ -10,3 +10,18 @@ svg {
     font-size: 12px;
     white-space: normal;
 }
+
+/* need to check if this actually does something */
+.tooltip {
+    position: absolute;
+    text-align: left;
+    width: auto;
+    height: auto;
+    padding: 5px;
+    font: 12px sans-serif;
+    background: rgb(155, 163, 173);
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+    opacity: 0;
+}
