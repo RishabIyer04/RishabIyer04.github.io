@@ -18,16 +18,16 @@ document.addEventListener("DOMContentLoaded", function() {
 function nextSlide(current, next) {
     document.getElementById(current).style.display = 'none';
     document.getElementById(next).style.display = 'block';
-    if (next === 'slide1' && window.data) drawPlot1(window.data, 'PG');
-    if (next === 'slide2' && window.data) drawPlot1(window.data, 'SF');
-    if (next === 'slide3' && window.data) drawPlot1(window.data, 'C');
-    if (next === 'conclusion' && window.data) drawPlot1(window.data, 'PF');
+    if (next === 'slide1' && window.data) drawPlot1('#graph1', window.data, 'PG');
+    if (next === 'slide2' && window.data) drawPlot1('#graph2', window.data, 'SF');
+    if (next === 'slide3' && window.data) drawPlot1('#graph3', window.data, 'C');
+    if (next === 'conclusion' && window.data) drawPlot1('#graph4', window.data, 'PF');
 }
 
 function previousSlide(current, previous) {
     document.getElementById(current).style.display = 'none';
     document.getElementById(previous).style.display = 'block';
-    if (previous === 'slide1' && window.data) drawPlot1(window.data, 'PG');
-    if (previous === 'slide2' && window.data) drawPlot1(window.data, 'SF');
-    if (previous === 'slide3' && window.data) drawPlot1(window.data, 'C');
+    if (previous === 'slide1' && window.data) drawPlot1('#graph1', window.data, 'PG');
+    if (previous === 'slide2' && window.data) drawPlot1('#graph2', window.data, 'SF');
+    if (previous === 'slide3' && window.data) drawPlot1('#graph3', window.data, 'C');
 }
