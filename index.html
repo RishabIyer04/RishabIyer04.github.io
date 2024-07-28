@@ -24,7 +24,7 @@
             as a player ages, they will eventually lose their ability to score more efficiently. However, how much of a factor 
             does age play into a player's PTS (points per game) on the court. That's what this visualization is here to find out.
         </p>
-        <img src = "images/NBA_players.png" class = "img-intro" alt = "NBA Players" width = "400" height = "600">
+        <img src = "images/NBA_players.png" class = "img-intro" alt = "NBA Players" width = "800" height = "1200">
         <button onclick="nextSlide('intro', 'slide1')">Next</button>
     </div>
     
@@ -40,9 +40,9 @@
                 <li>Tip: Hover over each data point to get a read on their name, age, position, PTS, and their 2P's and 3P's per game.</li>
             </ul>
         </p>
-        <svg id="graph1" width="1000" height="600"></svg>
         <button onclick="previousSlide('slide1', 'intro')">Previous</button>
         <button onclick="nextSlide('slide1', 'slide2')">Next</button>
+        <svg id="graph1" width="1000" height="600"></svg>
     </div>
     
     <div class="slide" id="slide2">
@@ -55,9 +55,9 @@
             <br>
             <li>Tip: Hover over each data point to get a read on their name, age, position, PTS, and their 2P's and 3P's per game.</li>
         </ul>
-        <svg id="graph2" width="1000" height="600"></svg>
         <button onclick="previousSlide('slide2', 'slide1')">Previous</button>
         <button onclick="nextSlide('slide2', 'slide3')">Next</button>
+        <svg id="graph2" width="1000" height="600"></svg>
     </div>
     
     <div class="slide" id="slide3">
@@ -72,9 +72,9 @@
                 <li>Tip: Hover over each data point to get a read on their name, age, position, PTS, and their 2P's and 3P's per game.</li>
             </ul>
         </p>
-        <svg id="graph3" width="1000" height="600"></svg>
         <button onclick="previousSlide('slide3', 'slide2')">Previous</button>
         <button onclick="nextSlide('slide3', 'conclusion')">Next</button>
+        <svg id="graph3" width="1000" height="600"></svg>
     </div>
     
     <div class="slide" id="conclusion">
@@ -83,9 +83,16 @@
             Let's play around with the scatter plot and compare how different positions perform based on their age.
             Other stuff.
         </p>
-        <svg id="graph4" width="1000" height="600"></svg>
         <button onclick="previousSlide('conclusion', 'slide3')">Previous</button>
         <button onclick="nextSlide('conclusion', 'intro')">Back to Beginning</button>
+        <select id="positionFilter">
+            <option value="Point Guard">Point Guard</option>
+            <option value="Shooting Guard">Shooting Guard</option>
+            <option value="Small Forward">Small Forward</option>
+            <option value="Power Forward">Power Forward</option>
+            <option value="Center">Center</option>
+          </select>
+        <svg id="graph4" width="1000" height="600"></svg>
     </div>
 
     <script src="https://d3js.org/d3.v6.min.js"></script>

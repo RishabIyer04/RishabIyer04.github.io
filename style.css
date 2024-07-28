@@ -4,7 +4,11 @@
 
 li {
     text-align: left;
-    font-size: 24px;
+    font-size: 20px;
+}
+
+img {
+    text-align: center;
 }
 
 h1 {

@@ -8,7 +8,7 @@ async function loadData() {
     return data;
 }
 
-function drawPlot1(svgId, data, position) {
+function drawPlot(svgId, data, position) {
     const sortedData = data.filter(d => d.Pos === position);
 
     const svg = d3.select(svgId);
@@ -71,7 +71,7 @@ function drawPlot1(svgId, data, position) {
 }
 
 window.loadData = loadData;
-window.drawPlot1 = drawPlot1;
+window.drawPlot = drawPlot;
 
 
 function addAnnotations(g, x, y, data) {
