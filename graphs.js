@@ -76,15 +76,15 @@ window.drawPlot1 = drawPlot1;
 
 function addAnnotations(g, x, y, data) {
     // Find players with the highest PTS at ages 24 and 35
-    const topPlayer24 = data.filter(d => d.Age === 24).reduce((a, b) => a.PTS > b.PTS ? a : b);
-    const topPlayer35 = data.filter(d => d.Age === 35).reduce((a, b) => a.PTS > b.PTS ? a : b);
+    const topYoungPlayer = data.filter(d => d.Age >= 19 && d.Age <= 30).reduce((a, b) => a.PTS > b.PTS ? a : b);
+    const topOldPlayer = data.filter(d => d.Age >= 31 && d.Age <= 40).reduce((a, b) => a.PTS > b.PTS ? a : b);
 
     // Add annotations
     const annotations = [
         {
             note: {
-                title: `${topPlayer24.Player}`,
-                label: `Position: ${topPlayer24.Pos} \n Age: ${topPlayer24.Age} \n PTS: ${topPlayer24.PTS} \n 2PT: ${topPlayer24["2P"]}`
+                title: `${topYoungPlayer.Player}`,
+                label: `Position: ${topYoungPlayer.Pos} \n Age: ${topYoungPlayer.Age} \n PTS: ${topYoungPlayer.PTS} \n 2P: ${topYoungPlayer["2P"]} \n 3P: ${topYoungPlayer["3P"]}`
             },
             data: topPlayer24,
             dx: 50,  // move 50 pixels to the right
@@ -92,8 +92,8 @@ function addAnnotations(g, x, y, data) {
         },
         {
             note: {
-                title: `${topPlayer35.Player}`,
-                label: `Position: ${topPlayer35.Pos} \n Age: ${topPlayer35.Age} \n PTS: ${topPlayer35.PTS} \n 2PT: ${topPlayer35["2P"]}`
+                title: `${topOldPlayer.Player}`,
+                label: `Position: ${topOldPlayer.Pos} \n Age: ${topOldPlayer.Age} \n PTS: ${topOldPlayer.PTS} \n 2P: ${topOldPlayer["2P"]} \n 3P: ${topYoungPlayer["3P"]}`
             },
             data: topPlayer35,
             dx: 50,  // move 50 pixels to the right
