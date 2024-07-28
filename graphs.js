@@ -84,18 +84,26 @@ function addAnnotations(g, x, y, data) {
         {
             note: {
                 title: `${topYoungPlayer.Player}`,
-                label: `Position: ${topYoungPlayer.Pos} \n Age: ${topYoungPlayer.Age} \n PTS: ${topYoungPlayer.PTS} \n 2P: ${topYoungPlayer["2P"]} \n 3P: ${topYoungPlayer["3P"]}`
+                label: `Position: ${topYoungPlayer.Pos} \n
+                        Age: ${topYoungPlayer.Age} \n 
+                        PTS: ${topYoungPlayer.PTS} \n 
+                        2P: ${topYoungPlayer["2P"]} \n 
+                        3P: ${topYoungPlayer["3P"]}`
             },
-            data: topPlayer24,
+            data: topYoungPlayer,
             dx: 50,  // move 50 pixels to the right
             dy: -50  // move 50 pixels up
         },
         {
             note: {
                 title: `${topOldPlayer.Player}`,
-                label: `Position: ${topOldPlayer.Pos} \n Age: ${topOldPlayer.Age} \n PTS: ${topOldPlayer.PTS} \n 2P: ${topOldPlayer["2P"]} \n 3P: ${topYoungPlayer["3P"]}`
+                label: `Position: ${topOldPlayer.Pos} \n 
+                        Age: ${topOldPlayer.Age} \n 
+                        PTS: ${topOldPlayer.PTS} \n 
+                        2P: ${topOldPlayer["2P"]} \n 
+                        3P: ${topYoungPlayer["3P"]}`
             },
-            data: topPlayer35,
+            data: topYoungPlayer,
             dx: 50,  // move 50 pixels to the right
             dy: -50  // move 50 pixels up
         }
