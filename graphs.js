@@ -19,20 +19,20 @@ const teamColors = {
     "DEN": "#0E2240", // Denver Nuggets
     "DET": "#C8102E", // Detroit Pistons
     "GSW": "#1D428A", // Golden State Warriors
-    "HOU": "#CE1141", // Houston Rockets
+    "HOU": "#FF0000", // Houston Rockets
     "IND": "#002D62", // Indiana Pacers
     "LAC": "#C8102E", // Los Angeles Clippers
     "LAL": "#552583", // Los Angeles Lakers
-    "MEM": "#5D76A9", // Memphis Grizzlies
+    "MEM": "#12173F", // Memphis Grizzlies
     "MIA": "#98002E", // Miami Heat
     "MIL": "#00471B", // Milwaukee Bucks
     "MIN": "#0C2340", // Minnesota Timberwolves
-    "NOP": "#0C2340", // New Orleans Pelicans
+    "NOP": "#002B5C", // New Orleans Pelicans
     "NYK": "#006BB6", // New York Knicks
     "OKC": "#007AC1", // Oklahoma City Thunder
     "ORL": "#0077C0", // Orlando Magic
     "PHI": "#006BB6", // Philadelphia 76ers
-    "PHX": "#1D1160", // Phoenix Suns
+    "PHX": "#E56020", // Phoenix Suns
     "POR": "#E03A3E", // Portland Trail Blazers
     "SAC": "#5A2D81", // Sacramento Kings
     "SAS": "#C4CED4", // San Antonio Spurs
@@ -118,7 +118,8 @@ function addAnnotations(g, x, y, data) {
         {
             note: {
                 title: `${topYoungPlayer.Player}`,
-                label: `Position: ${topYoungPlayer.Pos} \n
+                label: `Team: ${topYoungPlayer.Tm} \n
+                        Position: ${topYoungPlayer.Pos} \n
                         Age: ${topYoungPlayer.Age} \n 
                         PTS: ${topYoungPlayer.PTS} \n 
                         2P: ${topYoungPlayer["2P"]} \n 
@@ -131,7 +132,8 @@ function addAnnotations(g, x, y, data) {
         {
             note: {
                 title: `${topOldPlayer.Player}`,
-                label: `Position: ${topOldPlayer.Pos} \n 
+                label: `Team: ${topOldPlayer.Tm} \n
+                        Position: ${topOldPlayer.Pos} \n 
                         Age: ${topOldPlayer.Age} \n 
                         PTS: ${topOldPlayer.PTS} \n 
                         2P: ${topOldPlayer["2P"]} \n 
@@ -173,7 +175,13 @@ function addTooltips(g, data) {
                 .duration(100)
                 .style("opacity", .9);
 
-            tooltip.html(`Name: ${d.Player} <br/> Position: ${d.Pos} <br/> Age: ${d.Age} <br/> PTS: ${d.PTS} <br/> 2P: ${d["2P"]} <br/> 3P: ${d["3P"]}`)
+            tooltip.html(`Name: ${d.Player} <br/> 
+                        Team: ${d.Tm} \n
+                        Position: ${d.Pos} <br/> 
+                        Age: ${d.Age} <br/> 
+                        PTS: ${d.PTS} <br/> 
+                        2P: ${d["2P"]} <br/> 
+                        3P: ${d["3P"]}`)
                 .style("left", (event.pageX + 5) + "px")
                 .style("top", (event.pageY - 28) + "px");
         })
