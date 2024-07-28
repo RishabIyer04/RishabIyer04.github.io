@@ -32,9 +32,9 @@ function previousSlide(current, previous) {
     if (previous === 'slide3' && window.data) drawPlot('#graph3', window.data, 'C');
 }
 
-// function filterPosition() {
-//     if (window.data) {
-//         const position = document.getElementById('positionFilter').value;
-//         drawPlot('#graph4', window.data, position);
-//     }
-// }
+function filterPosition() {
+    if (window.data) {
+        const position = document.getElementById('positionFilter').value;
+        drawPlot('#graph4', window.data, position);
+    }
+}
