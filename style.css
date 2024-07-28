@@ -1,14 +1,19 @@
-.slide {
+/* .slide {
     text-align: center;
-}
+} */
 
 p {
     text-align: left;
     font-size: 16px;
 }
 
+h1 {
+    text-align: left;
+}
+
 svg {
     display: block;
+    text-align: center;
     margin: 0 auto;
 }
 
