@@ -103,7 +103,7 @@ function addAnnotations(g, x, y, data) {
                         2P: ${topOldPlayer["2P"]} \n 
                         3P: ${topYoungPlayer["3P"]}`
             },
-            data: topYoungPlayer,
+            data: topOldPlayer,
             dx: 50,  // move 50 pixels to the right
             dy: -50  // move 50 pixels up
         }
