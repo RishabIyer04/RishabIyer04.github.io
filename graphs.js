@@ -180,7 +180,7 @@ function addTooltips(g, data) {
         .on("mouseout", function(d) {
             d3.select(this)
                 .attr('r', 7)
-                .style("fill", "#69b3a2")
+                .style("fill", d => teamColors[d.Tm])
                 .style("stroke", "black");
 
             tooltip.transition()

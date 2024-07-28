@@ -18,8 +18,10 @@
     <div class="slide" id="intro">
         <h1>NBA 2023-2024 Visualization</h1>
         <p>
-            In the NBA, there are 5 positions in the game: 
+            In the NBA, there are 5 positions in the game: <br>
+            <br>
             Point Guard (PG), Shooting Guard (SG), Small Forward (SF), Power Forward (PF), Center (C)
+            <br>
             All these positions play vital roles in the game. However, no matter how productive a player is on the court,
             as a player ages, they will eventually lose their ability to score more efficiently. However, how much of a factor 
             does age play into a player's PTS (points per game) on the court. That's what this visualization is here to find out.
@@ -32,15 +34,20 @@
     <div class="slide" id="slide1">
         <h1>PG: Age vs PTS</h1>
         <p>
-            <ul>
-                <li>The first scene shows the correlation between Age and scoring production in the form of Points per Game (PTS) for NBA players who play the Point Guard position.</li>
-                <li>The horizontal axis represents the Age of the player, and the PTS represents the Points per game they scored for the regular season.</li>
-                <li>As you can see, there seems to be a bigger variation of data between the age range 19-30 than the age range 31-40.</li>
-                <li>For example, within the 19-30 age range, 24 year old Luka Doncić scores 33.9 Points per game, which is significantly higher than the 36 year old Step Curry, who scores 26.4 Points per game.</li>
-                <br>
-                <li>Tip: Hover over each data point to get a read on their name, age, position, PTS, and their 2P's and 3P's per game.</li>
-            </ul>
+            Points Guards have an average height of around 6'2.5". They are the strategic visionaries of the game, helping drive plays to the rim. 
+            <br>
+            This is position is where the most quick and agile players are, driving the game through a combination of elite dribbling, passing, and shooting not only on the 3-point line, but in the paint as well. 
+            <br>
+            Defensively, they are quick enough to get steals from other players to assist their team
         </p>
+        <ul>
+            <li>The first scene shows the correlation between Age and scoring production in the form of Points per Game (PTS) for NBA players who play the Point Guard position.</li>
+            <li>The horizontal axis represents the Age of the player, and the PTS represents the Points per game they scored for the regular season.</li>
+            <li>As you can see, there seems to be a bigger variation of data between the age range 19-30 than the age range 31-40.</li>
+            <br>
+            <li>For example, within the 19-30 age range, 24 year old Luka Doncić scores 33.9 Points per game, which is significantly higher than the 36 year old Step Curry, who scores 26.4 Points per game.</li>
+            <li>Tip: Hover over each data point to get a read on their name, age, position, PTS, and their 2P's and 3P's per game.</li>
+        </ul>
         <button onclick="previousSlide('slide1', 'intro')">Previous</button>
         <button onclick="nextSlide('slide1', 'slide2')">Next</button>
         <svg id="graph1" width="1000" height="600"></svg>
@@ -48,12 +55,17 @@
     
     <div class="slide" id="slide2">
         <h1>SF: Age vs PTS</h1>
+        <p>
+            Small Forwards have an average height from 6'4" to 6'9" and have a very different playstyle compared to Point Guards. They are extremely versatile as they are both agile enough and strong enough to score on the 3 point line as well as the paint. 
+            <br>
+            They are also very important defensively, as they can help with rebounds and covering strong opponents such as Power Forwards.
+        </p>
         <ul>
             <li>The second scene shows the correlation between Age and scoring production in the form of Points per Game (PTS) for NBA players who play the Small Forward position.</li>
-            <li>The horizontal axis represents the Age of the player, and the PTS represents the Points per game they scored for the regular season.</li>
             <li>The data presented here shows that there is a large amount of Small Forwards within the age range 19-30 than the age range 31-40.</li>
             <li>However, the interesting part is that the players with the highest PTS are within the age range of 31-40, that being people like Kawhi Leonard and DeMar DeRozan.</li>
             <br>
+            <li>The horizontal axis represents the Age of the player, and the PTS represents the Points per game they scored for the regular season.</li>
             <li>Tip: Hover over each data point to get a read on their name, age, position, PTS, and their 2P's and 3P's per game.</li>
         </ul>
         <button onclick="previousSlide('slide2', 'slide1')">Previous</button>
@@ -64,15 +76,16 @@
     <div class="slide" id="slide3">
         <h1>C: Age vs PTS</h1>
         <p>
-            <ul>
-                <li>The third scene shows the correlation between Age and scoring production in the form of Points per Game (PTS) for NBA players who play the Center position.</li>
-                <li>The horizontal axis represents the Age of the player, and the PTS represents the Points per game they scored for the regular season.</li>
-                <li>The data presented here shows that there is a hugely disproportionate amount of Centers within the age range 19-30 compared to the age range 31-40. In fact, there's a heavy concentration of players within the 23-26 age range.</li>
-                <li>29 year old Joel Embiid stands at the top with 34.7 PTS. But the average NBA center based on the graph will be hard pressed to make it past 15 PTS.</li>
-                <br>
-                <li>Tip: Hover over each data point to get a read on their name, age, position, PTS, and their 2P's and 3P's per game.</li>
-            </ul>
+
         </p>
+        <ul>
+            <li>The third scene shows the correlation between Age and scoring production in the form of Points per Game (PTS) for NBA players who play the Center position.</li>
+            <li>The data presented here shows that there is a hugely disproportionate amount of Centers within the age range 19-30 compared to the age range 31-40. In fact, there's a heavy concentration of players within the 23-26 age range.</li>
+            <li>29 year old Joel Embiid stands at the top with 34.7 PTS. But the average NBA center based on the graph will be hard pressed to make it past 15 PTS.</li>
+            <br>
+            <li>The horizontal axis represents the Age of the player, and the PTS represents the Points per game they scored for the regular season.</li>
+            <li>Tip: Hover over each data point to get a read on their name, age, position, PTS, and their 2P's and 3P's per game.</li>
+        </ul>
         <button onclick="previousSlide('slide3', 'slide2')">Previous</button>
         <button onclick="nextSlide('slide3', 'conclusion')">Next</button>
         <svg id="graph3" width="1000" height="600"></svg>
@@ -81,9 +94,16 @@
     <div class="slide" id="conclusion">
         <h1>Conclusion</h1>
         <p>
-            Let's play around with the scatter plot and compare how different positions perform based on their age.
-            Other stuff.
+            All the prior graph slides show how age can affect a player's scoring output differently based on their position. Some positions see a bigger decline in performance while others see very little performance dips.
+            <br>
+            Now, it's time to let you decide what position you want to focus on.
         </p>
+        <ul>
+            <li>Select what position you want to focus on using the drop down filter</li>
+            <br>
+            <li>The horizontal axis represents the Age of the player, and the PTS represents the Points per game they scored for the regular season.</li>
+            <li>Tip: Hover over each data point to get a read on their name, age, position, PTS, and their 2P's and 3P's per game.</li>
+        </ul>
         <button onclick="previousSlide('conclusion', 'slide3')">Previous</button>
         <button onclick="nextSlide('conclusion', 'intro')">Back to Beginning</button>
         <select id="positionFilter" onchange="filterPosition()">
