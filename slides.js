@@ -35,6 +35,6 @@ function previousSlide(current, previous) {
 function filterPosition() {
     if (window.data) {
         const position = document.getElementById('positionFilter').value;
-        drawPlot('#graph4', window.data, position);
+        drawPlot('#graph4', '#legend', window.data, position);
     }
 }
