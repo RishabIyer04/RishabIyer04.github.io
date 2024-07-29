@@ -46,7 +46,7 @@ function drawPlot(svgId, data, position) {
     const sortedData = data.filter(d => d.Pos === position);
 
     const svg = d3.select(svgId);
-    const margin = {top: 50, right: 50, bottom: 50, left: 50};
+    const margin = {top: 50, right: 50, bottom: 80, left: 50};
     const width = +svg.attr("width") - margin.left - margin.right;
     const height = +svg.attr("height") - margin.top - margin.bottom;
 
@@ -101,6 +101,7 @@ function drawPlot(svgId, data, position) {
 
     addAnnotations(g, x, y, sortedData);
     addTooltips(g, sortedData);
+    drawLegend(svg, margin, height);
 
 }
 
@@ -195,4 +196,38 @@ function addTooltips(g, data) {
                 .duration(100)
                 .style("opacity", 0);
         });
+}
+
+function drawLegend(svg, margin, height) {
+    const keys = Object.keys(teamColors); // List of team abbreviations
+    const color = d3.scaleOrdinal()
+        .domain(keys)
+        .range(Object.values(teamColors)); // Color scale using the team colors
+
+    const legendItemSize = 12; // Size of each legend square
+    const legendSpacing = 5; // Space between square and text
+    const legendItemWidth = 80; // Width of each legend item
+
+    // Add one dot in the legend for each team
+    svg.selectAll("squares")
+        .data(keys)
+        .enter()
+        .append("rect")
+        .attr("x", (d, i) => margin.left + i * legendItemWidth)
+        .attr("y", height + margin.top + 20)
+        .attr("width", legendItemSize)
+        .attr("height", legendItemSize)
+        .style("fill", d => color(d));
+
+    // Add one label in the legend for each team
+    svg.selectAll("mylabels")
+        .data(keys)
+        .enter()
+        .append("text")
+        .attr("x", (d, i) => margin.left + i * legendItemWidth + legendItemSize + legendSpacing)
+        .attr("y", height + margin.top + 20 + legendItemSize / 2)
+        .style("fill", d => color(d))
+        .text(d => d)
+        .attr("text-anchor", "left")
+        .style("alignment-baseline", "middle");
 }
