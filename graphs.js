@@ -42,7 +42,7 @@ const teamColors = {
 };
 
 
-function drawPlot(svgId, data, position) {
+function drawPlot(svgId, legendId, data, position) {
     const sortedData = data.filter(d => d.Pos === position);
 
     const svg = d3.select(svgId);
@@ -101,7 +101,7 @@ function drawPlot(svgId, data, position) {
 
     addAnnotations(g, x, y, sortedData);
     addTooltips(g, sortedData);
-    drawLegend("#legend");
+    drawLegend(legendId);
 
 }
 
