@@ -18,26 +18,26 @@ const teamColors = {
     "DAL": "#00538C", // Dallas Mavericks
     "DEN": "#0E2240", // Denver Nuggets
     "DET": "#C8102E", // Detroit Pistons
-    "GSW": "#1D428A", // Golden State Warriors
+    "GSW": "#FDB927", // Golden State Warriors
     "HOU": "#FF0000", // Houston Rockets
-    "IND": "#002D62", // Indiana Pacers
+    "IND": "#FDBB30", // Indiana Pacers
     "LAC": "#C8102E", // Los Angeles Clippers
     "LAL": "#552583", // Los Angeles Lakers
-    "MEM": "#12173F", // Memphis Grizzlies
+    "MEM": "#6189B9", // Memphis Grizzlies
     "MIA": "#98002E", // Miami Heat
     "MIL": "#00471B", // Milwaukee Bucks
-    "MIN": "#0C2340", // Minnesota Timberwolves
-    "NOP": "#002B5C", // New Orleans Pelicans
+    "MIN": "#236192", // Minnesota Timberwolves
+    "NOP": "#85714D", // New Orleans Pelicans
     "NYK": "#006BB6", // New York Knicks
-    "OKC": "#007AC1", // Oklahoma City Thunder
+    "OKC": "#EF3B24", // Oklahoma City Thunder
     "ORL": "#0077C0", // Orlando Magic
-    "PHI": "#006BB6", // Philadelphia 76ers
+    "PHI": "#ED174C", // Philadelphia 76ers
     "PHX": "#E56020", // Phoenix Suns
     "POR": "#E03A3E", // Portland Trail Blazers
     "SAC": "#5A2D81", // Sacramento Kings
     "SAS": "#C4CED4", // San Antonio Spurs
     "TOR": "#CE1141", // Toronto Raptors
-    "UTA": "#002B5C", // Utah Jazz
+    "UTA": "#00471B", // Utah Jazz
     "WAS": "#002B5C"  // Washington Wizards
 };
 
