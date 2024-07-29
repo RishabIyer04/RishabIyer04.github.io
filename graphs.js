@@ -205,9 +205,9 @@ function drawLegend(legend) {
         .domain(keys)
         .range(Object.values(teamColors)); // Color scale using the team colors
 
-    const legendItemSize = 12; // Size of each legend square
-    const legendSpacing = 5; // Space between the square and the text
-    const legendItemWidth = 60; // Width of each legend item
+    const legendItemSize = 10; // Size of each legend square
+    const legendSpacing = 3; // Space between the square and the text
+    const legendItemWidth = 50; // Width of each legend item
     const legendYOffset = 20; // y offset for the legend
 
     // Clear any existing legend items
