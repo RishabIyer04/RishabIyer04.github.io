@@ -177,7 +177,7 @@ function addTooltips(g, data) {
                 .style("opacity", .9);
 
             tooltip.html(`Name: ${d.Player} <br/> 
-                        Team: ${d.Tm} \n
+                        Team: ${d.Tm} <br/>
                         Position: ${d.Pos} <br/> 
                         Age: ${d.Age} <br/> 
                         PTS: ${d.PTS} <br/> 
