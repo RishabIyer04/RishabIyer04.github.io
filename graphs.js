@@ -119,12 +119,7 @@ function addAnnotations(g, x, y, data) {
         {
             note: {
                 title: `${topYoungPlayer.Player}`,
-                label: `Team: ${topYoungPlayer.Tm} \n
-                        Position: ${topYoungPlayer.Pos} \n
-                        Age: ${topYoungPlayer.Age} \n 
-                        PTS: ${topYoungPlayer.PTS} \n 
-                        2P: ${topYoungPlayer["2P"]} \n 
-                        3P: ${topYoungPlayer["3P"]}`
+                label: `Top Younger player with ${topYoungPlayer.PTS} PTS`
             },
             data: topYoungPlayer,
             dx: 50,  // move 50 pixels to the right
@@ -133,12 +128,7 @@ function addAnnotations(g, x, y, data) {
         {
             note: {
                 title: `${topOldPlayer.Player}`,
-                label: `Team: ${topOldPlayer.Tm} \n
-                        Position: ${topOldPlayer.Pos} \n 
-                        Age: ${topOldPlayer.Age} \n 
-                        PTS: ${topOldPlayer.PTS} \n 
-                        2P: ${topOldPlayer["2P"]} \n 
-                        3P: ${topYoungPlayer["3P"]}`
+                label: `Top Older player with ${topOldPlayer.PTS} PTS`
             },
             data: topOldPlayer,
             dx: 50,  // move 50 pixels to the right
@@ -206,7 +196,7 @@ function drawLegend(legend) {
         .range(Object.values(teamColors)); // Color scale using the team colors
 
     const legendItemSize = 10; // Size of each legend square
-    const legendSpacing = 3; // Space between the square and the text
+    const legendSpacing = 5; // Space between the square and the text
     const legendItemWidth = 50; // Width of each legend item
     const legendYOffset = 20; // y offset for the legend
 
