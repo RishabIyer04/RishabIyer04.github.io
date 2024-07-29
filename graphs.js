@@ -177,7 +177,7 @@ function addTooltips(g, data) {
                 .style("opacity", .9);
 
             tooltip.html(`Name: ${d.Player} <br/> 
-                        Team: ${d.Tm} \n
+                        Team: ${d.Tm} <br/>
                         Position: ${d.Pos} <br/> 
                         Age: ${d.Age} <br/> 
                         PTS: ${d.PTS} <br/> 
@@ -207,7 +207,7 @@ function drawLegend(legend) {
 
     const legendItemSize = 12; // Size of each legend square
     const legendSpacing = 5; // Space between the square and the text
-    const legendItemWidth = 60; // Width of each legend item
+    const legendItemWidth = 30; // Width of each legend item
     const legendYOffset = 20; // y offset for the legend
 
     // Clear any existing legend items
