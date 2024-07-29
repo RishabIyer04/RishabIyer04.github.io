@@ -207,7 +207,7 @@ function drawLegend(legend) {
 
     const legendItemSize = 12; // Size of each legend square
     const legendSpacing = 5; // Space between the square and the text
-    const legendItemWidth = 80; // Width of each legend item
+    const legendItemWidth = 60; // Width of each legend item
     const legendYOffset = 20; // y offset for the legend
 
     // Clear any existing legend items
